@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        </head>
+        <body style = "font-family:Arial">
+
+            <script>
+
+                var StringManupulator = function(sampleString){
+                    this.content = sampleString;
+                    this.checkUpdate = function(updatedString, isChanged){
+                        if(isChange === true){
+                            this.content = updatedString;
+                        }
+                    }
+
+                }
+                StringManupulator.prototype.removeMarkUp = function(isChanged = false){
+                    var stringMarkDown = this.content;
+
+                    while(stringMarkDown. includes("<")&&stringMarkDown.includes(">"))
+                    {
+                        var startPos = stringMarkDown.indexOf("<");
+                        var endPos = stringMarkDown.indexOf(">");
+                        var toRemove = stringMarkDown.slice(startPos, endPos);
+                        stringMarkDown = stringMarkDown.replace(toRemove, "");
+                        console.log(stringMarkDown.length);
+
+                    }
+                    this.checkUpdated(stringMarkDown, isChanged);
+                    return stringMarkDown;
+
+                }
+
+                var sample = newStringManupulator("<h1>Hello World</h1>");
+                document.write("<div>" + sample.removeMarkUp() + "</div>");
+                    
+            </script>
+
+        </body>
+    </hmtl>
